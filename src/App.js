@@ -11,7 +11,8 @@ function App() {
   }
 
   function handleTodo(remove) {
-    const filter = todos.filter((item) => item !== remove);
+    let control = todos.indexOf(remove);
+    const filter = todos.filter((item, index) => index !== control);
     setTodos(filter);
   }
 
