@@ -1,3 +1,5 @@
+import "./style.css";
+
 function TodoList({ todos, handleTodo }) {
   return (
     <div>
@@ -5,7 +7,9 @@ function TodoList({ todos, handleTodo }) {
         {todos.map((item, indice) => (
           <li key={indice}>
             {item}{" "}
-            <button onClick={() => handleTodo(item)}>Concluir tarefa</button>{" "}
+            <button className="btn" onClick={() => handleTodo(item)}>
+              Concluir tarefa
+            </button>{" "}
           </li>
         ))}
       </ul>
